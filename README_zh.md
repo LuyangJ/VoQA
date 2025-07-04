@@ -42,6 +42,7 @@ VoQA Benchmark是一个针对仅视觉输入的视觉问答任务（VoQA）的�
 ### 1. 数据集准备
 
 **第1步：** 从 🤗Hugging Face 上下载评测数据集: [AJN-AI/VoQA](https://huggingface.co/datasets/AJN-AI/VoQA)
+
 在Hugging Face上还提供了可以仅下载测试集分割的脚本。
 
 **第2步：** 修改主脚本中的 'EVAL_DIR' 参数，使其指向评测集的根目录
