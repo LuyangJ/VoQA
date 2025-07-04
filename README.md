@@ -43,7 +43,7 @@ VoQA Benchmark is a comprehensive benchmark for Visual-only Question Answering (
 
 **Step 1:** Download the evaluation datasets from 🤗Hugging Face: [AJN-AI/VoQA](https://huggingface.co/datasets/AJN-AI/VoQA)
 
-Scripts for downloading only the test split are available at Hugging Face.
+Scripts for only downloading the test split are available at Hugging Face.
 
 **Step 2:** Modify the `EVAL_DIR` parameter in the main scripts to point to your evaluation datasets root directory.
 
