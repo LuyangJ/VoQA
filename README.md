@@ -43,6 +43,7 @@ VoQA Benchmark is a comprehensive benchmark for Visual-only Question Answering (
 
 **Step 1:** Download the evaluation datasets from 🤗Hugging Face: [AJN-AI/VoQA](https://huggingface.co/datasets/AJN-AI/VoQA)
 Scripts for downloading only the test split are available at Hugging Face.
+
 **Step 2:** Modify the `EVAL_DIR` parameter in the main scripts to point to your evaluation datasets root directory.
 
 ### 2. Model and Environment Setup (Open-source Models Only)
@@ -149,8 +150,11 @@ VoQA-code/
 To add a new model for evaluation, follow these steps:
 
 **Step 1:** Create a new model folder
+
 **Step 2:** Configure the conda environment for your model
+
 **Step 3:** Add new branches in `eval/load_models.py` and `eval/models_inference.py`
+
 **Step 4:** Implement model loading and inference functions
 
 ## Additional functions

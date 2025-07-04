@@ -43,6 +43,7 @@ VoQA Benchmark是一个针对仅视觉输入的视觉问答任务（VoQA）的�
 
 **第1步：** 从 🤗Hugging Face 上下载评测数据集: [AJN-AI/VoQA](https://huggingface.co/datasets/AJN-AI/VoQA)
 在Hugging Face上还提供了可以仅下载测试集分割的脚本。
+
 **第2步：** 修改主脚本中的 'EVAL_DIR' 参数，使其指向评测集的根目录
 
 ### 2. 模型和环境准备 (仅开源模型)
@@ -149,8 +150,11 @@ VoQA-code/
 您可以参考如下步骤添加一个新的模型：
 
 **第1步：** 创建一个新模型的文件夹；
+
 **第2步：** 为您的模型配置相应的 conda 环境；
+
 **第3步：** 在 `eval/load_models.py` 和 `eval/models_inference.py` 中添加新模型对应的分支；
+
 **第4步：** 实现模型加载和模型推理的函数。
 
 ## 其他功能
