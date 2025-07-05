@@ -187,9 +187,9 @@ bash scripts_for_result_analysis/analyse_for_grt_main.sh
 ```
 
 ## ❤️ 致谢
-* 我们整个的评测代码逻辑是基于 [TinyLLaVA_Factory](https://github.com/TinyLLaVA/TinyLLaVA_Factory) 项目完成的. 很棒的工作!
-* `./models` 部分的代码是基于如下这些项目完成的: [TinyLLaVA_Factory](https://github.com/TinyLLaVA/TinyLLaVA_Factory), [LLaVA](https://github.com/haotian-liu/LLaVA), [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL), [InternVL](https://github.com/OpenGVLab/InternVL/tree/v2.5), [DeepSeek-VL2](https://github.com/deepseek-ai/DeepSeek-VL2), [BLIP-3](https://github.com/salesforce/LAVIS/tree/xgen-mm). 很棒的工作!
-* 我们项目中使用的数据来源于 [ShareGPT4V](https://github.com/InternLM/InternLM-XComposer/tree/main/projects/ShareGPT4V) 项目. 很棒的工作!
+* 我们整个的评测代码逻辑是基于 [TinyLLaVA_Factory](https://github.com/TinyLLaVA/TinyLLaVA_Factory) 项目完成的。很棒的工作!
+* `./models` 部分的代码是基于如下这些项目完成的: [TinyLLaVA_Factory](https://github.com/TinyLLaVA/TinyLLaVA_Factory)，[LLaVA](https://github.com/haotian-liu/LLaVA)，[Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL)，[InternVL](https://github.com/OpenGVLab/InternVL/tree/v2.5)，[DeepSeek-VL2](https://github.com/deepseek-ai/DeepSeek-VL2)，[BLIP-3](https://github.com/salesforce/LAVIS/tree/xgen-mm)。很棒的工作!
+* 我们项目中使用的数据来源于 [ShareGPT4V](https://github.com/InternLM/InternLM-XComposer/tree/main/projects/ShareGPT4V) 项目。很棒的工作!
 
 ## 许可
 
