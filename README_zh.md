@@ -47,9 +47,9 @@ VoQA Benchmark是一个针对仅视觉输入的视觉问答任务（VoQA）的�
 
 **第2步：** 修改主脚本中的 `EVAL_DIR` 参数，使其指向评测集的根目录
 
-### 2. 模型和环境准备 (仅开源模型)
+### 2. 模型和环境准备
 
-项目中包括以下预配置好的模型：
+**对于开源模型**，项目中包括以下预配置好的模型：
 
 * TinyLLaVA\_Factory: TinyLLaVA-Phi-2-SigLIP-3.1B, TinyLLaVA-Qwen2-0.5B-SigLIP, TinyLLaVA-Qwen2.5-3B-SigLIP
 * LLaVA: llava-v1.5-7b, llava-1.5-7b-hf
