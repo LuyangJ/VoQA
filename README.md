@@ -47,9 +47,9 @@ Scripts for only downloading the test split are available at Hugging Face.
 
 **Step 2:** Modify the `EVAL_DIR` parameter in the main scripts to point to your evaluation datasets root directory.
 
-### 2. Model and Environment Setup (Open-source Models Only)
+### 2. Model and Environment Setup
 
-The project includes the following pre-configured models:
+**For open source models**, the project includes the following pre-configured models:
 
 * TinyLLaVA\_Factory: TinyLLaVA-Phi-2-SigLIP-3.1B, TinyLLaVA-Qwen2-0.5B-SigLIP, TinyLLaVA-Qwen2.5-3B-SigLIP
 * LLaVA: llava-v1.5-7b, llava-1.5-7b-hf
@@ -74,6 +74,11 @@ conda activate tinyllava_factory
 pip install --upgrade pip  # enable PEP 660 support
 pip install -e .
 pip install flash-attn --no-build-isolation
+```
+
+**For all models, You need to install some necessary packages in your environment, just run the following command in the root directory:**
+```Shell
+pip install -r requirements.txt
 ```
 
 ### 3. Evaluation Process
