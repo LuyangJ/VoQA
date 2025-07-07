@@ -76,6 +76,11 @@ pip install -e .
 pip install flash-attn --no-build-isolation
 ```
 
+**对于所有模型，您需要在您的环境中安装一些必要的包。在根目录下执行如下命令：**
+```Shell
+pip install -r requirements.txt
+```
+
 ### 3. 评测过程
 
 在准备好数据集、模型和 conda 环境之后，您只需要修改主脚本中的几个参数。每个脚本中都提供了对每个参数的描述，您可以通过参考现有示例进行相应的修改。
