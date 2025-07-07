@@ -152,8 +152,54 @@ def eval_model(args):
     # The first step is to divide the problem based on the number of threads
     questions_lst = split_questions(questions, args.thread_num)
 
+    ##### Add: a filtering id function, to prevent the need to start all over again when accessing the api is interrupted due to network or other reasons
+    ### for merge file ###
+    # question_ids = []
+    # answers_file_merge_path = os.path.expanduser(os.path.join(args.answers_path, f"merge-original.jsonl"))
+    # with open(answers_file_merge_path, 'r', encoding='utf-8') as f:
+    #     for line in f:
+    #         data = json.loads(line)
+    #         if args.task != 'scienceqa':
+    #             question_id = data.get('question_id')
+    #         else:
+    #             question_id = data.get('id')
+    #         if question_id:
+    #             question_ids.append(question_id)
+    # print(f'merge total question_ids: {len(question_ids)}')
+
+    final_question_lst = []
+    for thread_id in range(len(questions_lst)):
+        answers_file_path = os.path.expanduser(os.path.join(args.answers_path, f"thread_{thread_id}.jsonl"))
+        if os.path.isfile(answers_file_path):
+            # Only add all the data corresponding to the id that is not in the current file
+            ### for thread_id file ###
+            question_ids = []
+            with open(answers_file_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    data = json.loads(line)
+                    if args.task != 'scienceqa':
+                        question_id = data.get('question_id')
+                    else:
+                        question_id = data.get('id')
+                    if question_id:
+                        question_ids.append(question_id)
+            print(f'thread_id = {thread_id}, total question_ids: {len(question_ids)}')
+            final_questions = []
+            for question in questions_lst[thread_id]:
+                if args.task != 'scienceqa':
+                    question_id = question['question_id']
+                else:
+                    question_id = question['id']
+                if question_id not in question_ids:
+                    final_questions.append(question)
+            final_question_lst.append(final_questions)
+            print(f"thread_id = {thread_id}, final questions left: {len(final_questions)}")
+        else:
+            final_question_lst.append(questions_lst[thread_id])
+            print(f"thread_id = {thread_id}, total questions num: {len(questions_lst[thread_id])}")
+
     # The second step is that each multi-thread loads data independently, uploads it to the website respectively for reasoning, and saves the results
-    submit_batch_ordered(questions_lst, args)
+    submit_batch_ordered(final_question_lst, args)
 
 
 if __name__ == "__main__":
